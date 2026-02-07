@@ -1,0 +1,7 @@
+ultralytics
+torch
+matplotlib
+pillow
+pandas
+ipython
+notebook
