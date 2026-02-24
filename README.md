@@ -1,116 +1,217 @@
+<div align="center">
+
 # 🔥 Fire Detection using YOLO
 
-An intelligent **computer vision–based fire detection system** built using the **YOLO (You Only Look Once)** object detection framework.  
-This project focuses on detecting fire in images with high accuracy and real-time performance, making it suitable for **early fire warning systems** and **surveillance applications**.
+```
+███████╗██╗██████╗ ███████╗    ██╗
+██╔════╝██║██╔══██╗██╔════╝    ██║
+█████╗  ██║██████╔╝█████╗      ██║
+██╔══╝  ██║██╔══██╗██╔══╝      ╚═╝
+██║     ██║██║  ██║███████╗    ██╗
+╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝    ╚═╝
+  Detect it. Before it destroys it.
+```
+
+![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-FF4500?style=for-the-badge&logo=pytorch)
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![OpenCV](https://img.shields.io/badge/OpenCV-Vision-red?style=for-the-badge&logo=opencv)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-EE4C2C?style=for-the-badge&logo=pytorch)
+![Status](https://img.shields.io/badge/Status-🔥%20Blazing-orange?style=for-the-badge)
+
+> *"By the time smoke detectors beep — this model has already seen the fire. 👁️🔥"*
+
+</div>
 
 ---
 
-## 🚀 Project Overview
+## ⚠️ The Problem
 
-Fire accidents cause massive damage when not detected early. Traditional fire detection systems rely on sensors that may fail in open or large environments.  
-This project leverages **deep learning and computer vision** to visually detect fire using images, enabling faster and more reliable detection.
+Every **3.4 minutes**, a fire breaks out somewhere in the world.  
+Every **88 seconds**, a fire department responds to a structural fire.  
+Traditional smoke/heat sensors? **Slow. Limited. Unreliable in open spaces.**
 
-**Key highlights:**
-- 🔍 Real-time fire detection using YOLO
-- 🧠 Deep learning–based approach
-- ⚡ Fast and scalable object detection
-- 📊 Trained and evaluated on a custom fire dataset
+**What if your cameras could see fire the moment it sparks?**
+
+That's exactly what this project does. 🎯
+
+---
+
+## 🧠 What is This?
+
+An intelligent **computer vision–based fire detection system** powered by **YOLO (You Only Look Once)** — one of the fastest object detection architectures in the world.
+
+Instead of waiting for smoke to reach a sensor, this system **looks at the scene visually**, processes it through a deep learning model, and flags fire **in real time** — making it ideal for surveillance, industrial safety, and smart city infrastructure.
+
+---
+
+## ✨ Key Highlights
+
+| Feature | Details |
+|--------|---------|
+| ⚡ **Speed** | Real-time detection with YOLO's single-pass inference |
+| 🧠 **Intelligence** | Deep learning trained on custom fire/non-fire scenarios |
+| 📉 **Low False Positives** | Multiple training iterations to fine-tune accuracy |
+| 🌍 **Versatile** | Works on images — extensible to video & live streams |
+| 🔬 **Experimental** | Multiple notebook versions documenting R&D process |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Programming Language:** Python  
-- **Framework:** YOLO (Ultralytics)  
-- **Libraries:** PyTorch, OpenCV, NumPy  
-- **Tools:** Jupyter Notebook, VS Code  
-- **Environment:** Virtual Environment (venv)
+```python
+tech_stack = {
+    "Language"   : "Python 3.x",
+    "Framework"  : "YOLO via Ultralytics",
+    "ML Backend" : "PyTorch",
+    "Vision"     : "OpenCV",
+    "Numerics"   : "NumPy",
+    "Environment": "venv + Jupyter Notebook",
+    "Editor"     : "VS Code"
+}
+```
 
 ---
 
 ## 📁 Project Structure
 
-Fire_Detection_using_YOLO/
+```
+🗂️ Fire_Detection_using_YOLO/
 │
-├── TrainingNotebook.ipynb
-├── TrainingNotebook2.ipynb
-├── Version_1_TrainingNotebook.ipynb
-├── requirements.txt
-├── .gitignore
-└── README.md
+├── 🔬 Version_1_TrainingNotebook.ipynb   ← The origin story
+├── 📓 TrainingNotebook.ipynb             ← Iteration 2
+├── 📓 TrainingNotebook2.ipynb            ← Refined & improved
+├── 📦 requirements.txt                   ← All you need to get started
+├── 🚫 .gitignore                         ← Keeping things clean
+└── 📄 README.md                          ← You're here!
+```
 
-yaml
-Copy code
-
-> ⚠️ **Note:**  
-> Dataset files and trained model weights (`.pt`) are intentionally excluded from the repository due to size constraints and GitHub best practices.
+> ⚠️ **Heads up:** Dataset files and trained model weights (`.pt`) are excluded from this repo due to size limits.  
+> 📬 *Want the dataset or weights? Drop a message — happy to share via Drive/Kaggle!*
 
 ---
 
 ## 📊 Dataset
 
-- Custom fire image dataset
-- Includes images with fire and non-fire scenarios
-- Dataset used only for training and evaluation
-
-📌 *Dataset can be provided upon request or via external storage (Google Drive / Kaggle).*
-
----
-
-## 🧪 Model Training
-
-The YOLO model was trained using multiple experimental notebooks to:
-- Tune hyperparameters
-- Improve detection accuracy
-- Reduce false positives
-
-Training notebooks document:
-- Data preprocessing
-- Model training
-- Evaluation metrics
-- Performance analysis
+- 🖼️ Custom fire image dataset curated for this project
+- ✅ Includes **fire** and **non-fire** scenes for balanced training
+- 🔀 Split into training and evaluation sets
+- 📌 Available on request via **Google Drive / Kaggle**
 
 ---
 
-## ▶️ How to Run
+## 🧪 Model Training Journey
 
-### 1️⃣ Clone the repository
+> Three notebooks. Three iterations. One goal — **zero fires missed.**
+
+```
+Version 1  ──►  Baseline model, initial results
+     ↓
+TrainingNotebook  ──►  Hyperparameter tuning, better mAP
+     ↓
+TrainingNotebook2  ──►  Optimized model, reduced false positives 🏆
+```
+
+Each notebook covers:
+- 🧼 Data preprocessing & augmentation
+- ⚙️ Model config & hyperparameter experiments
+- 📈 Training loss curves & evaluation metrics
+- 🔍 Performance analysis & visual results
+
+---
+
+## ▶️ Get It Running
+
+### 1️⃣ Clone the repo
 ```bash
 git clone https://github.com/KhushiKalwani24/Fire_Detection_using_YOLO.git
 cd Fire_Detection_using_YOLO
-2️⃣ Create virtual environment
-bash
-Copy code
+```
+
+### 2️⃣ Set up your environment
+```bash
 python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-3️⃣ Install dependencies
-bash
-Copy code
+source venv/bin/activate        # 🐧 Linux / macOS
+# OR
+venv\Scripts\activate           # 🪟 Windows
+```
+
+### 3️⃣ Install dependencies
+```bash
 pip install -r requirements.txt
-4️⃣ Run notebooks
-Open Jupyter Notebook and execute the training or inference notebooks.
+```
 
-🎯 Applications
-🔥 Early fire detection systems
+### 4️⃣ Launch the notebook
+```bash
+jupyter notebook TrainingNotebook2.ipynb
+```
 
-🏭 Industrial safety monitoring
+🔥 *Sit back and watch the model learn to see fire.*
 
-🏢 Smart buildings & surveillance
+---
 
-🌲 Forest fire monitoring
+## 🎯 Real-World Applications
 
-🌟 Future Enhancements
-Real-time video stream detection
+```
+🏭  Industrial Plants       →  Instant fire alerts before explosions
+🏢  Smart Buildings         →  Camera-based fire suppression triggers  
+🌲  Forest Monitoring       →  Satellite/drone feed analysis
+🚦  Traffic Surveillance    →  Vehicle fire detection on highways
+🏠  Home Security           →  Smarter than any smoke alarm
+```
 
-Integration with CCTV systems
+---
 
-Alert system (email/SMS)
+## 🌟 What's Coming Next?
 
-Deployment using Flask / FastAPI
+- [ ] 🎥 Real-time **video stream** detection
+- [ ] 📡 Integration with **CCTV pipelines**
+- [ ] 📲 **SMS / Email alert system** on fire detection
+- [ ] 🌐 Web dashboard using **Flask / FastAPI**
+- [ ] 🤖 Edge deployment on **Jetson Nano / Raspberry Pi**
+- [ ] ☁️ Cloud deployment for remote monitoring
 
-Edge deployment using Jetson or Raspberry Pi
+---
 
-👩‍💻 Author
-Khushi Kalwani
+## 📈 Performance Snapshot
 
-GitHub: @KhushiKalwani24
+> *Results improve across notebook versions — track the journey in the notebooks!*
+
+| Metric | Description |
+|--------|-------------|
+| 🎯 mAP | Mean Average Precision across fire class |
+| 📉 Loss | Box + Object + Class loss tracked per epoch |
+| ⚡ Speed | Inference time per image (ms) |
+| 🚫 FP Rate | False positive reduction across versions |
+
+---
+
+## 👩‍💻 Author
+
+<div align="center">
+
+### Khushi Kalwani
+
+*On a mission to make the world a little safer — one model at a time.* 🌍
+
+[![GitHub](https://img.shields.io/badge/GitHub-@KhushiKalwani24-black?style=for-the-badge&logo=github)](https://github.com/KhushiKalwani24)
+
+</div>
+
+---
+
+## ⭐ Like This Project?
+
+If this sparked something in you *(pun intended 🔥)*, leave a **star** ⭐ on the repo!  
+It keeps the motivation burning. 🕯️
+
+---
+
+<div align="center">
+
+```
+🔥 "The best fire alarm is the one that never goes off — because it stopped it first." 🔥
+```
+
+*Built with Python, PyTorch, and a burning passion for AI safety.*
+
+</div>
